@@ -49,6 +49,103 @@
             android:layout_height="40dp" />
 
 
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="filterTest"
+            android:textAllCaps="false"
+            android:onClick="filterTestClick"
+            android:layout_height="40dp" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="bufferTest"
+            android:textAllCaps="false"
+            android:onClick="bufferTestClick"
+            android:layout_height="40dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="timerTest"
+            android:textAllCaps="false"
+            android:onClick="timerTestClick"
+            android:layout_height="40dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="skipTest"
+            android:textAllCaps="false"
+            android:onClick="skipTestClick"
+            android:layout_height="40dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="takeTest"
+            android:textAllCaps="false"
+            android:onClick="takeTestClick"
+            android:layout_height="40dp" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="singleTest"
+            android:textAllCaps="false"
+            android:onClick="singleTestClick"
+            android:layout_height="40dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="distinctTest"
+            android:textAllCaps="false"
+            android:onClick="distinctTestClick"
+            android:layout_height="40dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="debounceTest"
+            android:textAllCaps="false"
+            android:onClick="debounceTestClick"
+            android:layout_height="40dp" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="lastTest"
+            android:textAllCaps="false"
+            android:onClick="lastTestClick"
+            android:layout_height="40dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="lastTest"
+            android:textAllCaps="false"
+            android:onClick="lastTestClick"
+            android:layout_height="40dp" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="mergeTest"
+            android:textAllCaps="false"
+            android:onClick="mergeTestClick"
+            android:layout_height="40dp" />
+        <Button
+            android:layout_width="match_parent"
+            android:text="reduceTest"
+            android:textAllCaps="false"
+            android:onClick="reduceTestClick"
+            android:layout_height="40dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="scanTest"
+            android:textAllCaps="false"
+            android:onClick="scanTestClick"
+            android:layout_height="40dp" />
+
+
+
         <TextView
             android:id="@+id/tvText"
             android:layout_width="wrap_content"
