@@ -144,6 +144,20 @@
             android:onClick="scanTestClick"
             android:layout_height="40dp" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:text="DeferTest"
+            android:textAllCaps="false"
+            android:onClick="DeferTestClick"
+            android:layout_height="40dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="windowTest"
+            android:textAllCaps="false"
+            android:onClick="windowTestClick"
+            android:layout_height="40dp" />
+
 
 
         <TextView

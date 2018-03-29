@@ -8,12 +8,14 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
 import cn.com.tianyudg.rxjava2demo.util.LogUtils;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
+import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.Single;
 import io.reactivex.SingleObserver;
@@ -388,5 +390,43 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+    }
+
+    public void DeferTestClick(View view) {
+        Observable<Integer> defer = Observable.defer(new Callable<ObservableSource<Integer>>() {
+            @Override
+            public ObservableSource<Integer> call() throws Exception {
+                return Observable.just(1, 3, 4, 5);
+            }
+        });
+
+        defer.subscribe(new Consumer<Integer>() {
+            @Override
+            public void accept(Integer integer) throws Exception {
+                LogUtils.e("integer = " + integer);
+            }
+        });
+
+
+    }
+
+    public void windowTestClick(View view) {
+        Observable
+                .interval(2,TimeUnit.SECONDS)
+                .take(15)
+                .window(4,TimeUnit.SECONDS)
+                .subscribe(new Consumer<Observable<Long>>() {
+                    @Override
+                    public void accept(Observable<Long> longObservable) throws Exception {
+                        LogUtils.e("window " );
+                        longObservable
+                                .subscribe(new Consumer<Long>() {
+                                    @Override
+                                    public void accept(Long aLong) throws Exception {
+                                        LogUtils.e("aLong = " + aLong);
+                                    }
+                                });
+                    }
+                });
     }
 }
